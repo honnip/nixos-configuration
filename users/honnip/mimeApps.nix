@@ -2,7 +2,6 @@
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {
-      # firefox
       "x-scheme-handler/http" = "firefox.desktop";
       "x-scheme-handler/https" = "firefox.desktop";
       "x-scheme-handler/chrome" = "firefox.desktop";
@@ -14,6 +13,9 @@
       "application/x-extension-xhtml" = "firefox.desktop";
       "application/x-extension-xht" = "firefox.desktop";
 
+      "text/plain" = "org.gnome.TextEditor.desktop";
+
+      "x-scheme-handler/mailto" = "userapp-Thunderbird-TT1RA2.desktop";
     };
   };
 }

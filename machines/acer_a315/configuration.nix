@@ -1,8 +1,13 @@
 { config, pkgs, lib, ... }: {
   imports = [
     ../../modules/nix.nix
+    ../../modules/locale.nix
     ../../modules/pipewire.nix
     ../../modules/sysutils.nix
+    ../../modules/fonts.nix
+    ../../modules/flatpak.nix
+    ./services.nix
+    ./programs.nix
     ./hardware-configuration.nix
   ];
 
@@ -20,10 +25,7 @@
     networkmanager.enable = true;
   };
 
-  environment.variables = {
-    MOZ_ENABLE_WAYLAND="1";
-    #GTK_IM_MODULE="ibus";
-    #QT_IM_MODULE="ibus";
-    #XMODIFIERS="@im=ibus";    
-  };
+  environment.sessionVariables = { MOZ_ENABLE_WAYLAND = "1"; };
+
+  system.stateVersion = "23.11";
 }

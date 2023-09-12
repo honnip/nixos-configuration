@@ -1,9 +1,9 @@
-{ pkgs, ...}: {
+{ pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     # network client
     curl
     wget
-    
+
     # compressor
     zip
     unzip

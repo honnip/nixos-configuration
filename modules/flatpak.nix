@@ -1,6 +1,13 @@
-{ config, pkgs, ... }: 
-{
+{ pkgs, config, ... }: {
   services.flatpak.enable = true;
+  environment.systemPackages = with pkgs; [ flatpak gnome.gnome-software ];
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [ xdg-desktop-portal-gnome ];
+  };
+
+  # fonts and icons
   system.fsPackages = with pkgs; [ bindfs ];
   fileSystems = let
     mkRoSymBind = path: {
@@ -10,7 +17,7 @@
     };
     aggregatedFonts = pkgs.buildEnv {
       name = "system-fonts";
-      paths = config.fonts.fonts;
+      paths = config.fonts.packages;
       pathsToLink = [ "/share/fonts" ];
     };
   in {

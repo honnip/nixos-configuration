@@ -1,7 +1,7 @@
-{ pkgs, ...} : {
+{ pkgs, ... }: {
   i18n = {
     defaultLocale = "ko_KR.UTF-8";
-    inputMehtod = {
+    inputMethod = {
       enabled = "ibus";
       ibus.engines = with pkgs.ibus-engines; [ hangul ];
     };

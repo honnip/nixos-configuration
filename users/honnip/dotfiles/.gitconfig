@@ -1,0 +1,14 @@
+[user]
+    name = honnip
+    email = git@honnip.page
+
+[core]
+    editor = nvim
+    pager = bat
+    quotepath = false
+
+[init]
+    defaultBranch = main
+
+[color]
+    ui = auto

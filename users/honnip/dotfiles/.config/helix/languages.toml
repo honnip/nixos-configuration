@@ -1,0 +1,12 @@
+[[language]]
+name = "rust"
+auto-format = true
+
+[[language]]
+name = "javascript"
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "js"]}
+
+[[language]]
+name = "fish"
+formatter = {command = "fish_indent"}
+auto-format = true

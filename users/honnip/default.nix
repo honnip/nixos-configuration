@@ -1,24 +1,29 @@
-{ ... }: {
+{ pkgs, config, ... }@args: {
   users.users.honnip = {
-    isNormalUser = true;
+    description = "J seungwoo";
     home = "/home/honnip";
+    shell = pkgs.fish;
+    isNormalUser = true;
     extraGroups = [ "wheel" "audio" "video" "networkmanager" ];
   };
-
-  home.username = "honnip";
-  home.homeDirectory = "/home/honnip";
 
   home-manager.users.honnip = {
     imports = [
       ./gnome.nix
-      ./flatpak.nix
       ./shell.nix
-      ./git.nix
-      ./packages.nix
+      ./dotfiles.nix
+      ./packages
       ./wayland.nix
       ./programs.nix
+      ./services.nix
       ./mimeApps.nix
     ];
+    home.username = "honnip";
+    home.homeDirectory = "/home/honnip";
+    xdg.userDirs = {
+      enable = true;
+      createDirectories = true;
+    };
 
     home.stateVersion = "23.05";
   };

@@ -1,27 +1,31 @@
 { pkgs, ... }: {
-  home.packages = with pkgs; [
-    gnomeExtensions.appindicator
-    gnomeExtensions.tailscale-status
-    gnomeExtensions.clipboard-history
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.dock-from-dash
-    gnomeExtensions.just-perfection
-    gnomeExtensions.rounded-window-corners
-    gnomeExtensions.alphabetical-app-grid
-    gnomeExtensions.smile-complementary-extension
+  home.packages = with pkgs.gnomeExtensions; [
+    alphabetical-app-grid
+    appindicator
+    blur-my-shell
+    clipboard-history
+    dock-from-dash
+    just-perfection
+    rounded-window-corners
+    smile-complementary-extension
+    tailscale-status
   ];
 
   dconf.settings = {
     "org/gnome/shell" = {
       disable-user-extensions = false;
+      enabled-extensions = [
+        "AlphabeticalAppGrid@stuarthayhurst"
+        "appindicatorsupport@rgcjonas.gmail.com"
+        "blur-my-shell@aunetx"
+        "clipboard-history@alexsaveau.dev"
+        "dock-from-dash@fthx"
+        "just-perfection-desktop@just-perfection"
+        "rounded-window-corners@yilozt"
+        "smile-extension@mijorus.it"
+        "tailscale-status@maxgallup.github.com"
+      ];
     };
-
-    enabled-extensions = [];
-  };
-
-  xdg.portal = {
-    enable = true;
-    extraPortals = with pkgs; [ xdg-desktop-portal-gnome ];
   };
 }
 
