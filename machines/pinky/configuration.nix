@@ -21,7 +21,7 @@
   };
 
   networking = {
-    hostName = "acer";
+    hostName = "pinky";
     networkmanager.enable = true;
   };
 

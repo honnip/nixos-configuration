@@ -28,6 +28,7 @@
     };
     "org/freedesktop/ibus/engine/hangul" = {
       "switch-keys" = "Hangul";
+      "use-event-forwarding" = false;
     };
   };
 }
