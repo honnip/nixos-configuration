@@ -1,9 +1,9 @@
 [user]
     name = honnip
-    email = git@honnip.page
+    email = me@honnip.page
 
 [core]
-    editor = nvim
+    editor = hx
     pager = bat
     quotepath = false
 

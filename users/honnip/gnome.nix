@@ -26,6 +26,9 @@
         "tailscale-status@maxgallup.github.com"
       ];
     };
+    "org/freedesktop/ibus/engine/hangul" = {
+      "switch-keys" = "Hangul";
+    };
   };
 }
 

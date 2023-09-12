@@ -54,7 +54,7 @@
   # networking.interfaces.wlp4s0.useDHCP = lib.mkDefault true;
   hardware.opengl = {
     enable = true;
-    extraPackages = with pkgs; [ vaapiVdpau libvdpau-va-gl ];
+    extraPackages = with pkgs; [ amdvlk vaapiVdpau libvdpau-va-gl ];
   };
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode =

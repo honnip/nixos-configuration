@@ -14,6 +14,7 @@
       "application/x-extension-xht" = "firefox.desktop";
 
       "text/plain" = "org.gnome.TextEditor.desktop";
+      "application/pdf" = "org.gnome.Evince.desktop";
 
       "x-scheme-handler/mailto" = "userapp-Thunderbird-TT1RA2.desktop";
     };
