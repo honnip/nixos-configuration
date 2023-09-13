@@ -2,16 +2,15 @@
   description = "NixOS system configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    spicetify-nix.url = "github:the-argus/spicetify-nix";
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, spicetify-nix, ... }:
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, ... }:
     let
       base = {
         system.configurationRevision = nixpkgs.lib.mkIf (self ? rev) self.rev;
@@ -51,7 +50,6 @@
             nixos-hardware.nixosModules.common-pc-laptop-ssd
             ./machines/acer_a315/configuration.nix
             ./users/honnip
-            { home-manager.extraSpecialArgs = { inherit spicetify-nix; }; }
           ];
         };
       };
