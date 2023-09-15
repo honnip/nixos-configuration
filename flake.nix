@@ -52,6 +52,20 @@
             ./users/honnip
           ];
         };
+        "pinky" = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            base
+            gnome
+            nixos-hardware.nixosModules.common-cpu-amd
+            nixos-hardware.nixosModules.common-cpu-amd-pstate
+            nixos-hardware.nixosModules.common-gpu-amd
+            nixos-hardware.nixosModules.common-pc
+            nixos-hardware.nixosModules.common-pc-ssd
+            ./machines/pinky/configuration.nix
+            ./users/honnip
+          ];
+        };
       };
     };
 }

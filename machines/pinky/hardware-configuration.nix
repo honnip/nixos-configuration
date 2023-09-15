@@ -13,36 +13,36 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/cf8941d3-6b68-4264-9954-92214560600b";
+    device = "/dev/disk/by-uuid/bd869d0c-b482-4012-87e4-263c0d0be9d8";
     fsType = "btrfs";
-    options = [ "subvol=root" "compress=zstd" ];
+    options = [ "subvol=@root" "compress=zstd" ];
   };
 
   fileSystems."/home" = {
-    device = "/dev/disk/by-uuid/cf8941d3-6b68-4264-9954-92214560600b";
+    device = "/dev/disk/by-uuid/bd869d0c-b482-4012-87e4-263c0d0be9d8";
     fsType = "btrfs";
-    options = [ "subvol=home" "compress=zstd" ];
+    options = [ "subvol=@home" "compress=zstd" ];
   };
 
   fileSystems."/nix" = {
-    device = "/dev/disk/by-uuid/cf8941d3-6b68-4264-9954-92214560600b";
+    device = "/dev/disk/by-uuid/bd869d0c-b482-4012-87e4-263c0d0be9d8";
     fsType = "btrfs";
-    options = [ "subvol=nix" "compress=zstd" ];
+    options = [ "subvol=@nix" "compress=zstd" ];
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/51DC-4227";
+    device = "/dev/disk/by-uuid/0BC0-C3C9";
     fsType = "vfat";
   };
 
   fileSystems."/swap" = {
-    device = "/dev/disk/by-uuid/cf8941d3-6b68-4264-9954-92214560600b";
-    options = [ "subvol=swap" "noatime" ];
+    device = "/dev/disk/by-uuid/bd869d0c-b482-4012-87e4-263c0d0be9d8";
+    options = [ "subvol=@swap" "noatime" ];
   };
 
   swapDevices = [{
     device = "/swap/swapfile";
-    options = [ "subvol=swap" "noatime" ];
+    options = [ "subvol=@swap" "noatime" ];
   }];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
