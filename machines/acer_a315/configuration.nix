@@ -2,6 +2,7 @@
   imports = [
     ../../modules/nix.nix
     ../../modules/locale.nix
+    ../../modules/gpg.nix
     ../../modules/pipewire.nix
     ../../modules/sysutils.nix
     ../../modules/fonts.nix

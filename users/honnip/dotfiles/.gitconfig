@@ -1,6 +1,13 @@
 [user]
     name = honnip
     email = me@honnip.page
+    signingkey = 576E43EF8482E415
+
+[commit]
+    gpgsign = true
+
+[tag]
+    gpgsign = true
 
 [core]
     editor = hx
