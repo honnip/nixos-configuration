@@ -5,6 +5,9 @@
     fd
     helix
     yt-dlp
+
+    openssl
+
     starship
     mcfly
 
