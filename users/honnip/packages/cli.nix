@@ -4,9 +4,11 @@
     ripgrep
     fd
     helix
+
     yt-dlp
 
     openssl
+    android-tools
 
     starship
     mcfly
