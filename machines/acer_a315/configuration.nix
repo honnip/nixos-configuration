@@ -8,7 +8,6 @@
     ../../modules/fonts.nix
     ../../modules/flatpak.nix
     ./services.nix
-    ./programs.nix
     ./hardware-configuration.nix
   ];
 
