@@ -3,8 +3,14 @@ name = "rust"
 auto-format = true
 
 [[language]]
-name = "javascript"
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "js"]}
+name = "typescript"
+language-server = { command = "deno", args = ["lsp"] }
+config = { enable = true, unstable = true }
+
+[[language]]
+name = "typescript"
+language-server = { command = "deno", args = ["lsp"]}
+config = { enable = true, unstable = true }
 
 [[language]]
 name = "fish"
