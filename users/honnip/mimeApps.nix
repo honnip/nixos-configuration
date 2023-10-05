@@ -16,6 +16,8 @@
       "text/plain" = "org.gnome.TextEditor.desktop";
       "application/pdf" = "org.gnome.Evince.desktop";
 
+      "audio/mp4" = "org.gnome.Totem.desktop";
+
       "x-scheme-handler/mailto" = "userapp-Thunderbird-TT1RA2.desktop";
     };
   };
