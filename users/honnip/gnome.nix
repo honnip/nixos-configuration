@@ -1,15 +1,16 @@
 { pkgs, ... }: {
-  home.packages = with pkgs.gnomeExtensions; [
-    alphabetical-app-grid
-    appindicator
-    blur-my-shell
-    clipboard-history
-    dock-from-dash
-    just-perfection
-    rounded-window-corners
-    smile-complementary-extension
-    tailscale-status
-  ];
+  home.packages = with pkgs.gnomeExtensions;
+    [
+      alphabetical-app-grid
+      appindicator
+      blur-my-shell
+      clipboard-history
+      dock-from-dash
+      just-perfection
+      rounded-window-corners
+      smile-complementary-extension
+      tailscale-status
+    ] ++ [ pkgs.gnome-firmware ];
 
   dconf.settings = {
     "org/gnome/shell" = {

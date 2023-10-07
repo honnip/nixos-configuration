@@ -1,7 +1,6 @@
 { ... }: {
   programs.vscode.enable = true;
   programs.firefox.enable = true;
-  programs.git.enable = true;
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;
