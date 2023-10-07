@@ -9,10 +9,9 @@
       dates = "weekly";
       options = "--delete-older-than 14d";
     };
-    extraOptions = "
+    extraOptions = ''
       experimental-features = nix-command flakes
       keep-outputs = true
-      keep-derivations = true
-    ";
+      keep-derivations = true'';
   };
 }

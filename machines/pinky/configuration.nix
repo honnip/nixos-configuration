@@ -7,6 +7,7 @@
     ../../modules/sysutils.nix
     ../../modules/fonts.nix
     ../../modules/flatpak.nix
+    ../../modules/printer.nix
     ./services.nix
     ./hardware-configuration.nix
   ];
