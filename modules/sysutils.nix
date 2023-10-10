@@ -25,4 +25,5 @@
     tree
     jq
   ];
+  services.fwupd.enable = true;
 }
