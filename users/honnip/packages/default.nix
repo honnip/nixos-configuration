@@ -1,5 +1,12 @@
 { pkgs, ... }: {
-  imports = [ ./social.nix ./desktop.nix ./cli.nix ./media.nix ./document.nix ];
+  imports = [
+    ./social.nix
+    ./desktop.nix
+    ./develop.nix
+    ./cli.nix
+    ./media.nix
+    ./document.nix
+  ];
   home.packages = with pkgs;
     [
       # lsp
