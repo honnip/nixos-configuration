@@ -14,7 +14,6 @@
       ./dotfiles.nix
       ./packages
       ./wayland.nix
-      ./programs.nix
       ./services.nix
       ./mimeApps.nix
     ];
