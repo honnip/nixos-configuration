@@ -28,6 +28,7 @@
       "image/svg+xml" = "org.gnome.eog.desktop";
 
       "x-scheme-handler/mailto" = "userapp-Thunderbird-TT1RA2.desktop";
+      "x-scheme-handler/tg" = "org.telegram.desktop.desktop";
     };
   };
 }
