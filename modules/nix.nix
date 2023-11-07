@@ -1,5 +1,6 @@
 {
   nix = {
+    optimise.automatic = true;
     settings = {
       trusted-users = [ "root" "@wheel" ];
       auto-optimise-store = true;
