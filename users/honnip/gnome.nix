@@ -27,6 +27,9 @@
         "tailscale-status@maxgallup.github.com"
       ];
     };
+    "org/gnome/mutter" = {
+      "experimental-features" = [ "scale-monitor-framebuffer" ];
+    };
     "org/freedesktop/ibus/engine/hangul" = {
       "switch-keys" = "Hangul";
       "use-event-forwarding" = false;
