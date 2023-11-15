@@ -6,6 +6,7 @@
     iosevka
     ibm-plex
     pretendard
+    monaspace
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 }
