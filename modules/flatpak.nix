@@ -1,6 +1,6 @@
 { pkgs, config, ... }: {
   services.flatpak.enable = true;
-  environment.systemPackages = with pkgs; [ flatpak gnome.gnome-software ];
+  environment.systemPackages = with pkgs; [ flatpak flatpak-builder gnome.gnome-software ];
 
   xdg.portal = {
     enable = true;
