@@ -4,9 +4,9 @@
       alphabetical-app-grid
       appindicator
       blur-my-shell
-      clipboard-history
       dock-from-dash
       just-perfection
+      pano
       rounded-window-corners
       smile-complementary-extension
       tailscale-status
@@ -15,13 +15,14 @@
   dconf.settings = {
     "org/gnome/shell" = {
       disable-user-extensions = false;
+      # gsettings get org.gnome.shell asdf
       enabled-extensions = [
         "AlphabeticalAppGrid@stuarthayhurst"
         "appindicatorsupport@rgcjonas.gmail.com"
         "blur-my-shell@aunetx"
-        "clipboard-history@alexsaveau.dev"
         "dock-from-dash@fthx"
         "just-perfection-desktop@just-perfection"
+        "pano@elhan.io"
         "rounded-window-corners@yilozt"
         "smile-extension@mijorus.it"
         "tailscale-status@maxgallup.github.com"
