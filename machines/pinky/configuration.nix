@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }: {
+{
   imports = [
     ../../modules/nix.nix
     ../../modules/locale.nix
@@ -26,5 +26,5 @@
     networkmanager.enable = true;
   };
 
-  system.stateVersion = "23.11";
+  system.stateVersion = "24.05";
 }
