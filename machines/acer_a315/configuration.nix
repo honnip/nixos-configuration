@@ -19,6 +19,10 @@
       enable = true;
       editor = false;
     };
+    tmp = {
+      useTmpfs = true;
+      tmpfsSize = "100%";
+    };
   };
 
   networking = {
