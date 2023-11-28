@@ -1,7 +1,8 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
     discord
-    element-desktop
+    # element-desktop
+    fractal
     zoom-us
     tdesktop
     thunderbird
