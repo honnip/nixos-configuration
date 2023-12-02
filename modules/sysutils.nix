@@ -24,6 +24,8 @@
     # cli
     tree
     jq
+
+    joycond
   ];
   services.fwupd.enable = true;
 }
