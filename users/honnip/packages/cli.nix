@@ -12,9 +12,6 @@
     openssl
     android-tools
 
-    starship
-    mcfly
-
     spicetify-cli
   ];
   programs.direnv = {

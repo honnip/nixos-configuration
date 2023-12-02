@@ -1,12 +1,11 @@
-{ pkgs, config, ... }@args: {
+{ pkgs, ... }: {
   users.users.honnip = {
     description = "J seungwoo";
     home = "/home/honnip";
     shell = pkgs.fish;
     isNormalUser = true;
     extraGroups = [ "wheel" "audio" "video" "networkmanager" ];
-    openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJPEHAfQ0Ad/AApCdvjxMTB+YB6WkT/UIVnfXfqn7swZ honnip@pinky
-" ];
+    openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJPEHAfQ0Ad/AApCdvjxMTB+YB6WkT/UIVnfXfqn7swZ honnip@pinky" ];
   };
 
   home-manager.users.honnip = {
