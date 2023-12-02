@@ -9,7 +9,7 @@
       pano
       rounded-window-corners
       smile-complementary-extension
-      tailscale-status
+      tailscale-qs
     ] ++ [ pkgs.gnome-firmware ];
 
   dconf.settings = {
@@ -25,7 +25,7 @@
         "pano@elhan.io"
         "rounded-window-corners@yilozt"
         "smile-extension@mijorus.it"
-        "tailscale-status@maxgallup.github.com"
+        "tailscale@joaophi.github.com"
       ];
     };
     "org/gnome/mutter" = {
