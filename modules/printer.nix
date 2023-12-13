@@ -1,9 +1,13 @@
 { pkgs, config, ... }: {
-  services.printing = { enable = true; };
+  services.printing.enable = true;  
   services.avahi = {
     enable = true;
-    nssmdns = false; # use mdns4
     openFirewall = true;
+    nssmdns = false;
+    publish = {
+      enable = true;
+      addresses = true;
+    };
   };
 
   system.nssModules = with pkgs.lib;
