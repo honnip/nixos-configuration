@@ -5,7 +5,5 @@
     [
       # lsp
       nil
-
-      kanata
     ];
 }

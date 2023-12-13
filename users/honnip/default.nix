@@ -1,10 +1,11 @@
 { pkgs, ... }: {
+  users.extraGroups.uinput = {};
   users.users.honnip = {
     description = "J seungwoo";
     home = "/home/honnip";
     shell = pkgs.fish;
     isNormalUser = true;
-    extraGroups = [ "wheel" "audio" "video" "cups" "networkmanager" ];
+    extraGroups = [ "wheel" "audio" "video" "input" "uinput" "cups" "networkmanager" ];
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJPEHAfQ0Ad/AApCdvjxMTB+YB6WkT/UIVnfXfqn7swZ honnip@pinky"
     ];
