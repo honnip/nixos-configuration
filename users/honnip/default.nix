@@ -3,7 +3,7 @@
   users.users.honnip = {
     description = "J seungwoo";
     home = "/home/honnip";
-    shell = pkgs.fish;
+    shell = pkgs.nushell;
     isNormalUser = true;
     extraGroups = [ "wheel" "audio" "video" "input" "uinput" "cups" "networkmanager" ];
     openssh.authorizedKeys.keys = [

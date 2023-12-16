@@ -1,24 +1,26 @@
-{ pkgs, ... }: {
-  programs.fish = {
+{
+  programs.nushell = {
     enable = true;
-    shellAbbrs = {
-      nvmetmp = "sudo nvme smart-log /dev/nvme0n1 | rg ^temperature";
-    };
-    plugins = [
-      # {
-      #   name = "fish-async-prompt";
-      #   src = pkgs.fishPlugins.async-prompt.src;
-      # }
-      {
-        name = "autopair";
-        src = pkgs.fishPlugins.autopair.src;
+    extraConfig = ''
+      $env.config = {
+        show_banner: false
+        completions: {
+          algorithm: "fuzzy"
+        }
+
+        history: {
+          max_size: 100_000
+          file_format: "sqlite"
+        }
+
+        rm: {
+          always_trash: true
+        }
       }
-      {
-        name = "colored-man-pages";
-        src = pkgs.fishPlugins.colored-man-pages.src;
-      }
-    ];
+    '';
   };
+
+  programs.carapace.enable = true;
   programs.starship.enable = true;
   programs.mcfly.enable = true;
 }
