@@ -2,13 +2,14 @@
   home.packages = with pkgs; [
     obs-studio
 
-    bitwarden
+    goldwarden
 
     discord
     fractal
     zoom-us
     tdesktop
     thunderbird
+    kiwitalk
 
     libreoffice
     obsidian
