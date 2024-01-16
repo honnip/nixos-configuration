@@ -19,6 +19,7 @@
       enable = true;
       editor = false;
     };
+    kernelModules = [ "v4l2loopback" "snd-aloop" ];
     tmp = {
       useTmpfs = true;
       tmpfsSize = "100%";
