@@ -1,6 +1,2 @@
-[[language]]
-name = "rust"
-
-[language.config]
-checkOnSave = { command = "check" }
-cargo = { features = [ "dataframe" ] }
+[language-server.rust-analyzer.config]
+check.command = "clippy"

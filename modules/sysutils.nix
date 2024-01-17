@@ -9,7 +9,7 @@
     unzip
     zstd
     lz4
-    p7zip
+    _7zz
 
     # monitoring
     lm_sensors
