@@ -2,6 +2,7 @@
   home.packages = with pkgs; [
     git
     difftastic
+    delta
     bat
     ripgrep
     fd

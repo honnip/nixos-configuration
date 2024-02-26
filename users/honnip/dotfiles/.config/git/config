@@ -5,21 +5,47 @@
 
 [core]
     editor = hx
-    pager = bat
+    pager = delta
     quotepath = false
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+    light = false
 
 [init]
     defaultBranch = main
 
 [commit]
     gpgsign = true
+    verbose = true
+
+[pull]
+    rebase = true
+
+[push]
+    default = current
+
+[merge]
+    conflictstyle = zdiff3
 
 [tag]
     gpgsign = true
+    sort = taggerdate
+
+[branch]
+    sort = -committerdate
+
+[rerere]
+    enabled = true
 
 [diff]
     external = difft
     tool = difftastic
+    colorMoved = default
+    algorithm = histogram
 
 [difftool]
     prompt = false
@@ -32,3 +58,20 @@
 
 [color]
     ui = auto
+
+[transfer]
+    fsckobjects = true
+[fetch]
+    fsckobjects = true
+[receive]
+    fsckObjects = true
+
+[url "git@github.com:"]
+    insteadOf = "gh:"
+    pushInsteadOf = "https://github.com/"
+
+[help]
+    autocorrect = immediate
+
+[log]
+    date = iso
