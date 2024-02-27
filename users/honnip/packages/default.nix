@@ -1,6 +1,5 @@
 { pkgs, ... }: {
-  imports =
-    [ ./desktop.nix ./develop.nix ./cli.nix ./media.nix ];
+  imports = [ ./desktop.nix ./develop.nix ./cli.nix ./media.nix ];
   home.packages = with pkgs;
     [
       # lsp
