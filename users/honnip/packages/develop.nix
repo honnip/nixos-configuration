@@ -4,4 +4,6 @@
     enable = true;
     package = pkgs.openjdk;
   };
+
+  home.packages = with pkgs; [ ccache ];
 }

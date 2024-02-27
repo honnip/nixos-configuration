@@ -16,6 +16,8 @@
 
     libreoffice
     obsidian
+
+    scrcpy
   ];
 
   programs.vscode.enable = true;
