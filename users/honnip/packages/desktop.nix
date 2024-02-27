@@ -4,7 +4,10 @@
 
     goldwarden
 
-    discord
+    (discord.override {
+      withOpenASAR = true;
+      withVencord = true;
+    })
     fractal
     zoom-us
     tdesktop
